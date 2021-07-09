@@ -1,3 +1,18 @@
+# General notes for similar projects:
+
+For setting it up:
+    npx create-react-app my-app
+    npm audit fix
+
+For navigation:
+    npm install --save react-router-dom  
+(NOT react-router --> that's the core, and not react-router-native unless needed)
+
+For React-Redux, for easier management of lots of states, network requests, and more:
+    npm install --save redux react-redux axios redux-thunk
+    npm install --save lodash
+Lodash helps deal with arrays/objects used in Action Creators / Reducers, memoizing functions
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
