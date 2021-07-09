@@ -8,7 +8,8 @@ const PageTwo = () => {
     return <div>PageTwo<button>click me!</button></div>
 }
 
-
+// the "exact" property checks if the page path exactly matches the "path" property in the component
+// otherwise it checks if it just contains the "path" property.
 const App = () => {
     return (
         <div>
