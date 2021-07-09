@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const PageOne = () => {
-    return <div>PageOne</div>
+    return <div>This is page 1.  Go to <Link to="/pagetwo">page two</Link>.</div>
 }
 const PageTwo = () => {
-    return <div>PageTwo<button>click me!</button></div>
+    return <div>This is Page Two.  Here's a button: <button>click me!</button>  Go to <Link to="/">Page One</Link>.</div>
 }
 
 // the "exact" property checks if the page path exactly matches the "path" property in the component
