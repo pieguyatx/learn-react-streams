@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 // See resources for alternate routers: HashRouter or MemoryRouter
 // https://www.udemy.com/course/react-redux/learn/lecture/12700551#questions/11889548
 // BrowserRouter miiiiight cause problems in deployment if the server isn't set up for React to serve index.html 
@@ -11,14 +11,16 @@ import StreamEdit from './streams/StreamEdit';
 import StreamDelete from './streams/StreamDelete';
 import StreamList from './streams/StreamList';
 import StreamShow from './streams/StreamShow';
+import Header from './Header';
 
 // the "exact" property checks if the page path exactly matches the "path" property in the component
 // otherwise it checks if it just contains the "path" property.
 const App = () => {
     return (
-        <div>
+        <div className="ui container">
             <BrowserRouter>
                 <div>
+                    <Header />
                     <Route path="/" exact component={StreamList} />
                     <Route path="/streams/new" exact component={StreamCreate} />
                     <Route path="/streams/edit" exact component={StreamEdit} />
