@@ -13,6 +13,12 @@ For React-Redux, for easier management of lots of states, network requests, and 
     npm install --save lodash
 Lodash helps deal with arrays/objects used in Action Creators / Reducers, memoizing functions
 
+For installing Redux Form, see [some notes](https://www.udemy.com/course/react-redux/learn/lecture/24215118#questions) from the course.  If using Node v15 and npm v7, run this:
+    npm install redux-form --legacy-peer-deps
+Otherwise for older versions:
+    npm install --save redux-form
+...should avoid errors.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
