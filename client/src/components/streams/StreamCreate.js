@@ -2,14 +2,25 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form'; // Field is a react component; reduxForm is a function
 
 class StreamCreate extends React.Component {
+    renderError({error, touched}) {
+        if (touched && error) {
+            return (
+                <div className="ui error message">
+                    <div className="header">{error}</div>
+                </div>
+            );
+        }
+    }
+
+
     // every react input element should be "controlled"...
-    renderInput( {input, label, meta} ) {
+    renderInput = ( {input, label, meta} ) => {
         // shortened syntax for redux-form adds all properties of input as props of that component:
         return (
             <div className="field">
                 <label>{label}</label>
-                <input {...input} />
-                <div>{meta.error}</div>
+                <input {...input} autoComplete="off" />
+                {this.renderError(meta)}
             </div>
         );
     }
