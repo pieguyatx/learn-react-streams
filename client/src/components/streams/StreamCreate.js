@@ -13,11 +13,17 @@ class StreamCreate extends React.Component {
         );
     }
 
+    onSubmit(formValues) {
+        // event.preventDefault();  // <-- this is handled by Redux Form
+        console.log(formValues);
+    }
+
     render() {
         return (
-            <form className="ui form">
+            <form className="ui form" onSubmit={this.props.handleSubmit(this.onSubmit)}>
                 <Field name="title" component={this.renderInput} label="Enter Title" />
                 <Field name="description" component={this.renderInput} label="Enter Description" />
+                <button className="ui button primary">Submit</button>
             </form>
         );
     }
